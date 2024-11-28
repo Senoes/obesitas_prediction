@@ -12,13 +12,15 @@ with open(model_path, 'rb') as file:
 st.title("Prediksi Kategori Obesitas")
 
 # Deskripsi di bawah judul
-st.write("""
+st.markdown("""
     Aplikasi ini digunakan untuk memprediksi kategori obesitas berdasarkan data pribadi pengguna seperti umur, jenis kelamin, tinggi badan, 
     berat badan, dan tingkat aktivitas fisik. Hasil prediksi akan memberikan kategori obesitas berdasarkan rumus BMI (Body Mass Index), 
     yang mengklasifikasikan individu ke dalam kategori: Underweight, Normal weight, Overweight, atau Obese.  
-    Sumber data: [https://www.kaggle.com/datasets/mrsimple07/obesity-prediction/data](https://www.kaggle.com/datasets/mrsimple07/obesity-prediction/data)<br>
+    <br><br>
+    <strong>Sumber data:</strong> <a href="https://www.kaggle.com/datasets/mrsimple07/obesity-prediction/data" target="_blank">https://www.kaggle.com/datasets/mrsimple07/obesity-prediction/data</a>
+    <br>
     Dibuat oleh Seno Satrio_223307026
-""")
+""", unsafe_allow_html=True)
 
 # Sidebar for input
 st.sidebar.header("Input Data")
