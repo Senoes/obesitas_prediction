@@ -17,7 +17,6 @@ st.write("""
     berat badan, dan tingkat aktivitas fisik. Hasil prediksi akan memberikan kategori obesitas berdasarkan rumus BMI (Body Mass Index), 
     yang mengklasifikasikan individu ke dalam kategori: Underweight, Normal weight, Overweight, atau Obese.  
     Sumber data: [https://www.kaggle.com/datasets/mrsimple07/obesity-prediction/data](https://www.kaggle.com/datasets/mrsimple07/obesity-prediction/data)
-    
     Dibuat oleh Seno Satrio_223307026
 """)
 
