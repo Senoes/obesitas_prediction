@@ -16,7 +16,7 @@ st.write("""
     Aplikasi ini digunakan untuk memprediksi kategori obesitas berdasarkan data pribadi pengguna seperti umur, jenis kelamin, tinggi badan, 
     berat badan, dan tingkat aktivitas fisik. Hasil prediksi akan memberikan kategori obesitas berdasarkan rumus BMI (Body Mass Index), 
     yang mengklasifikasikan individu ke dalam kategori: Underweight, Normal weight, Overweight, atau Obese.  
-    Sumber data: [https://www.kaggle.com/datasets/mrsimple07/obesity-prediction/data](https://www.kaggle.com/datasets/mrsimple07/obesity-prediction/data)
+    Sumber data: [https://www.kaggle.com/datasets/mrsimple07/obesity-prediction/data](https://www.kaggle.com/datasets/mrsimple07/obesity-prediction/data)<br>
     Dibuat oleh Seno Satrio_223307026
 """)
 
