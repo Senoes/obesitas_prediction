@@ -25,7 +25,7 @@ st.markdown("""
 # Sidebar for input
 st.sidebar.header("Input Data")
 age = st.sidebar.number_input("Umur", min_value=1, max_value=100, value=30)
-gender = st.sidebar.selectbox("Jenis Kelamin", ["Male", "Female"])
+gender = st.sidebar.selectbox("Jenis Kelamin", ["Laki-Laki", "Perempuan"])
 height = st.sidebar.number_input("Tinggi Badan (cm)", min_value=100.0, max_value=250.0, value=170.0)
 weight = st.sidebar.number_input("Berat Badan (kg)", min_value=20.0, max_value=200.0, value=70.0)
 physical_activity = st.sidebar.slider("Level Aktivitas Fisik (1: Rendah, 5: Tinggi)", 1, 5, 3)
