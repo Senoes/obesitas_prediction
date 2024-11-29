@@ -46,7 +46,7 @@ input_data = pd.DataFrame({
 # Preprocess input data (make sure to use the same transformation as during training)
 # Using LabelEncoder for 'Gender'
 label_encoder = LabelEncoder()
-label_encoder.fit(["Male", "Female"])  # Fit the label encoder with the same labels used during training
+label_encoder.fit(["Laki-Laki", "Perempuan"])  # Fit the label encoder with the same labels used during training
 input_data["Gender"] = label_encoder.transform(input_data["Gender"])
 
 # Define the label encoder for the categories (Normal weight, Obese, Overweight, Underweight)
