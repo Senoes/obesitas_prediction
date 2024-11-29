@@ -11,6 +11,41 @@ with open(model_path, 'rb') as file:
 # Title
 st.title("Prediksi Kategori Obesitas")
 
+#open file csv
+df = pd.read_csv('data_obesitas.csv')
+
+def show_grafik():
+    tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs(["Age", "Gender", "Height", "Weight", "BMI", "PhysicalActivityLevel", "ObesityCategory"])
+    with tab1:
+        st.write("Grafik Umur")
+        chart_airtemperature = pd.DataFrame(df, columns=["Age"])
+        st.line_chart(chart_airtemperature)
+    with tab2:
+        st.write("Grafik Jenis Kelamin")
+        chart_processtemperature = pd.DataFrame(df, columns=["Gender"])
+        st.line_chart(chart_processtemperature)
+    with tab3:
+        st.write("Grafik Tinggi Badan")
+        chart_rotationalspeed = pd.DataFrame(df, columns=["Height"])
+        st.line_chart(chart_rotationalspeed)
+    with tab4:
+        st.write("Grafik Berat Badan")
+        chart_torque = pd.DataFrame(df, columns=["Weight"])
+        st.line_chart(chart_torque)
+    with tab5:
+        st.write("Grafik BMI")
+        chart_toolwear = pd.DataFrame(df, columns=["BMI"])
+        st.line_chart(chart_toolwear)
+    with tab6:
+        st.write("Grafik PhysicalActivityLevel")
+        chart_toolwear = pd.DataFrame(df, columns=["PhysicalActivityLevel"])
+        st.line_chart(chart_toolwear)
+    with tab7:
+        st.write("Grafik ObesityCategory")
+        chart_toolwear = pd.DataFrame(df, columns=["ObesityCategory"])
+        st.line_chart(chart_toolwear)
+
+
 # Deskripsi di bawah judul
 st.markdown("""
     Aplikasi ini digunakan untuk memprediksi kategori obesitas berdasarkan data pribadi pengguna seperti umur, jenis kelamin, tinggi badan, 
@@ -53,6 +88,10 @@ input_data["Gender"] = label_encoder.transform(input_data["Gender"])
 category_encoder = LabelEncoder()
 category_encoder.fit(["Underweight", "Normal weight", "Overweight", "Obese"])
 
+# Display input data
+st.subheader("Data Input")
+st.write(input_data)
+
 # Make prediction
 if st.button("Prediksi"):
     try:
@@ -67,6 +106,10 @@ if st.button("Prediksi"):
     except Exception as e:
         st.error(f"Terjadi kesalahan saat melakukan prediksi: {str(e)}")
 
-# Display input data
-st.subheader("Data Input")
-st.write(input_data)
+st.subheader("Dataset")
+st.dataframe(df)
+
+st.subheader("Grafik")
+show_grafik()
+
+
