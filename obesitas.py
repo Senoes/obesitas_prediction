@@ -18,32 +18,32 @@ def show_grafik():
     tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs(["Age", "Gender", "Height", "Weight", "BMI", "PhysicalActivityLevel", "ObesityCategory"])
     with tab1:
         st.write("Grafik Umur")
-        chart_airtemperature = pd.DataFrame(df, columns=["Age"])
-        st.line_chart(chart_airtemperature)
+        chart_age = pd.DataFrame(df, columns=["Age"])
+        st.bar_chart(chart_age)
     with tab2:
         st.write("Grafik Jenis Kelamin")
-        chart_processtemperature = pd.DataFrame(df, columns=["Gender"])
-        st.line_chart(chart_processtemperature)
+        chart_gender = pd.DataFrame(df, columns=["Gender"])
+        st.bar_chart(chart_gender)
     with tab3:
         st.write("Grafik Tinggi Badan")
-        chart_rotationalspeed = pd.DataFrame(df, columns=["Height"])
-        st.line_chart(chart_rotationalspeed)
+        chart_height = pd.DataFrame(df, columns=["Height"])
+        st.bar_chart(chart_height)
     with tab4:
         st.write("Grafik Berat Badan")
-        chart_torque = pd.DataFrame(df, columns=["Weight"])
-        st.line_chart(chart_torque)
+        chart_weight = pd.DataFrame(df, columns=["Weight"])
+        st.bar_chart(chart_weight)
     with tab5:
         st.write("Grafik BMI")
-        chart_toolwear = pd.DataFrame(df, columns=["BMI"])
-        st.line_chart(chart_toolwear)
+        chart_bmi = pd.DataFrame(df, columns=["BMI"])
+        st.bar_chart(chart_bmi)
     with tab6:
         st.write("Grafik PhysicalActivityLevel")
-        chart_toolwear = pd.DataFrame(df, columns=["PhysicalActivityLevel"])
-        st.line_chart(chart_toolwear)
+        chart_level = pd.DataFrame(df, columns=["PhysicalActivityLevel"])
+        st.bar_chart(chart_level)
     with tab7:
         st.write("Grafik ObesityCategory")
-        chart_toolwear = pd.DataFrame(df, columns=["ObesityCategory"])
-        st.line_chart(chart_toolwear)
+        chart_category = pd.DataFrame(df, columns=["ObesityCategory"])
+        st.bar_chart(category)
 
 
 # Deskripsi di bawah judul
