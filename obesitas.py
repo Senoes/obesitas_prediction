@@ -58,7 +58,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Sidebar_chart for input
-st.sidebar_chart.header("Input Data")
+st.sidebar.header("Input Data")
 age = st.sidebar_chart.number_input("Umur", min_value=1, max_value=100, value=30)
 gender = st.sidebar_chart.selectbox("Jenis Kelamin", ["Laki-Laki", "Perempuan"])
 height = st.sidebar_chart.number_input("Tinggi Badan (cm)", min_value=100.0, max_value=250.0, value=170.0)
