@@ -19,31 +19,31 @@ def show_grafik():
     with tab1:
         st.write("Grafik Umur")
         chart_age = pd.DataFrame(df, columns=["Age"])
-        st.bar(chart_age)
+        st.pyplot(chart_age)
     with tab2:
         st.write("Grafik Jenis Kelamin")
         chart_gender = pd.DataFrame(df, columns=["Gender"])
-        st.bar(chart_gender)
+        st.pyplot(chart_gender)
     with tab3:
         st.write("Grafik Tinggi Badan")
         chart_height = pd.DataFrame(df, columns=["Height"])
-        st.bar(chart_height)
+        st.pyplot(chart_height)
     with tab4:
         st.write("Grafik Berat Badan")
         chart_weight = pd.DataFrame(df, columns=["Weight"])
-        st.bar(chart_weight)
+        st.pyplot(chart_weight)
     with tab5:
         st.write("Grafik BMI")
         chart_bmi = pd.DataFrame(df, columns=["BMI"])
-        st.bar(chart_bmi)
+        st.pyplot(chart_bmi)
     with tab6:
         st.write("Grafik PhysicalActivityLevel")
         chart_level = pd.DataFrame(df, columns=["PhysicalActivityLevel"])
-        st.bar(chart_level)
+        st.pyplot(chart_level)
     with tab7:
         st.write("Grafik ObesityCategory")
         chart_category = pd.DataFrame(df, columns=["ObesityCategory"])
-        st.bar(chart_category)
+        st.pyplot(chart_category)
 
 
 # Deskripsi di bawah judul
@@ -57,13 +57,13 @@ st.markdown("""
     Dibuat oleh Seno Satrio_223307026
 """, unsafe_allow_html=True)
 
-# Sidebar for input
-st.sidebar.header("Input Data")
-age = st.sidebar.number_input("Umur", min_value=1, max_value=100, value=30)
-gender = st.sidebar.selectbox("Jenis Kelamin", ["Laki-Laki", "Perempuan"])
-height = st.sidebar.number_input("Tinggi Badan (cm)", min_value=100.0, max_value=250.0, value=170.0)
-weight = st.sidebar.number_input("Berat Badan (kg)", min_value=20.0, max_value=200.0, value=70.0)
-physical_activity = st.sidebar.slider("Level Aktivitas Fisik (1: Rendah, 5: Tinggi)", 1, 5, 3)
+# Sidepyplot for input
+st.sidepyplot.header("Input Data")
+age = st.sidepyplot.number_input("Umur", min_value=1, max_value=100, value=30)
+gender = st.sidepyplot.selectbox("Jenis Kelamin", ["Laki-Laki", "Perempuan"])
+height = st.sidepyplot.number_input("Tinggi Badan (cm)", min_value=100.0, max_value=250.0, value=170.0)
+weight = st.sidepyplot.number_input("Berat Badan (kg)", min_value=20.0, max_value=200.0, value=70.0)
+physical_activity = st.sidepyplot.slider("Level Aktivitas Fisik (1: Rendah, 5: Tinggi)", 1, 5, 3)
 
 # Calculate BMI
 bmi = weight / ((height / 100) ** 2)
