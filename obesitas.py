@@ -22,7 +22,7 @@ def show_grafik():
     with tab1:
         st.write("Grafik Umur")
         chart_age = pd.DataFrame(df, columns=["Age"])
-        st.plotly_chart(chart_age)
+        st.bar_chart(chart_age)
     with tab2:
         st.write("Grafik Jenis Kelamin")
         chart_gender = pd.DataFrame(df, columns=["Gender"])
@@ -30,7 +30,7 @@ def show_grafik():
     with tab3:
         st.write("Grafik Tinggi Badan")
         chart_height = pd.DataFrame(df, columns=["Height"])
-        plt.bar(chart_height)
+        plt.bar_chart(chart_height)
     with tab4:
         st.write("Grafik Berat Badan")
         chart_weight = pd.DataFrame(df, columns=["Weight"])
