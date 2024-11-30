@@ -3,6 +3,7 @@ import pandas as pd
 import pickle
 import matplotlib.pyplot as plt
 import numpy as np
+import plotly.express as plx
 from sklearn.preprocessing import LabelEncoder
 
 # Load trained model
@@ -21,8 +22,8 @@ def show_grafik():
     with tab1:
         st.write("Grafik Umur")
         chart_age = pd.DataFrame(df, columns=["Age"])
-        plt.bar(chart_age)
-        plt.show()
+        fig = plx.histogram(df, columns=["Age"] x="Umur")
+        st.plotly_chart(fig)
     with tab2:
         st.write("Grafik Jenis Kelamin")
         chart_gender = pd.DataFrame(df, columns=["Gender"])
