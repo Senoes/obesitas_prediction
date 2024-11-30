@@ -43,7 +43,7 @@ def show_grafik():
     with tab7:
         st.write("Grafik ObesityCategory")
         chart_category = pd.DataFrame(df, columns=["ObesityCategory"])
-        st.bar_chart(category)
+        st.bar_chart(chart_category)
 
 
 # Deskripsi di bawah judul
