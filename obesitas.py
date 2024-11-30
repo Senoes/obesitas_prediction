@@ -21,8 +21,7 @@ def show_grafik():
     with tab1:
         st.write("Grafik Umur")
         chart_age = pd.DataFrame(df, columns=["Age"])
-        plt.scatter(chart_age)
-        plt.show()
+        plt.pyplot(chart_age)
     with tab2:
         st.write("Grafik Jenis Kelamin")
         chart_gender = pd.DataFrame(df, columns=["Gender"])
