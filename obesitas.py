@@ -19,31 +19,31 @@ def show_grafik():
     with tab1:
         st.write("Grafik Umur")
         chart_age = pd.DataFrame(df, columns=["Age"])
-        st.bar_chart(chart_age)
+        st.bar(chart_age)
     with tab2:
         st.write("Grafik Jenis Kelamin")
         chart_gender = pd.DataFrame(df, columns=["Gender"])
-        st.bar_chart(chart_gender)
+        st.bar(chart_gender)
     with tab3:
         st.write("Grafik Tinggi Badan")
         chart_height = pd.DataFrame(df, columns=["Height"])
-        st.bar_chart(chart_height)
+        st.bar(chart_height)
     with tab4:
         st.write("Grafik Berat Badan")
         chart_weight = pd.DataFrame(df, columns=["Weight"])
-        st.bar_chart(chart_weight)
+        st.bar(chart_weight)
     with tab5:
         st.write("Grafik BMI")
         chart_bmi = pd.DataFrame(df, columns=["BMI"])
-        st.bar_chart(chart_bmi)
+        st.bar(chart_bmi)
     with tab6:
         st.write("Grafik PhysicalActivityLevel")
         chart_level = pd.DataFrame(df, columns=["PhysicalActivityLevel"])
-        st.bar_chart(chart_level)
+        st.bar(chart_level)
     with tab7:
         st.write("Grafik ObesityCategory")
         chart_category = pd.DataFrame(df, columns=["ObesityCategory"])
-        st.bar_chart(chart_category)
+        st.bar(chart_category)
 
 
 # Deskripsi di bawah judul
