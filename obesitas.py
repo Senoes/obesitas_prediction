@@ -89,7 +89,7 @@ input_data["Gender"] = label_encoder.transform(input_data["Gender"])
 
 # Define the label encoder for the categories (Normal weight, Obese, Overweight, Underweight)
 category_encoder = LabelEncoder()
-category_encoder.fit(["Kekurangan Berat Badan", "Berat Badan Normal", "Kelebihan Berat Badan", "Obesitas"])
+category_encoder.fit(["Underweight", "Normal weight", "Overweight", "Obese"])
 
 # Display input data
 st.subheader("Data Input")
